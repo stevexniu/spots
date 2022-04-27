@@ -39,7 +39,4 @@ res <- PermutationCorr(x, y, R = 9999)
 }
 
 }
-\seealso{
-\code{\link[Rfast]{permcor}}
-}
 \concept{stats}

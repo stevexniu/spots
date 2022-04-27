@@ -3,8 +3,8 @@ rspca v0.1.0
 ***
 
 ## Test environments
-* windows-x86_64-devel (r-devel)
 * macos-highsierra-release-cran (r-release)
+* windows-x86_64-devel (r-devel)
 * fedora-clang-devel (r-devel)
 
 ## R CMD check results

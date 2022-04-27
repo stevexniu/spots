@@ -147,7 +147,6 @@ ZPvalue <- function(Z, alternative = c("two.sided", "less", "greater"), p.adjust
 #'   \item p.val, permutation based p-value.
 #'   \item return.permutation, permutation used if returned.
 #' }
-#' @seealso \code{\link[Rfast]{permcor}}
 #' @export
 #' @concept stats
 #' @examples \dontrun{

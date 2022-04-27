@@ -29,7 +29,7 @@ A list containing the following:
 Calculate permutation based p-value for Pearson's correlation coefficient.
 }
 \details{
-It's adapted from \code{\link[Rfast]{permcor}} function in \href{https://cran.r-project.org/package=Rfast}{Rfast} with corrections in calculating the number of permutations and the p-values.
+It's adapted from \code{permcor} function in \href{https://cran.r-project.org/package=Rfast}{Rfast} with corrections in calculating the number of permutations and the p-values.
 }
 \examples{
 \dontrun{

@@ -134,7 +134,7 @@ ZPvalue <- function(Z, alternative = c("two.sided", "less", "greater"), p.adjust
 #'
 #' Calculate permutation based p-value for Pearson's correlation coefficient.
 #'
-#' It's adapted from \code{\link[Rfast]{permcor}} function in \href{https://cran.r-project.org/package=Rfast}{Rfast} with corrections in calculating the number of permutations and the p-values.
+#' It's adapted from \code{permcor} function in \href{https://cran.r-project.org/package=Rfast}{Rfast} with corrections in calculating the number of permutations and the p-values.
 #'
 #' @param x A numerical vector with the first variable.
 #' @param y A numerical vector with the second variable.

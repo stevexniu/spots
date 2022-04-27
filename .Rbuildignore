@@ -13,5 +13,4 @@ appveyor.yml
 codecov.yml
 ^_pkgdown\.yml$
 vignettes
-^README\.md$
-^NEWS\.md$
+^LICENSE\.md$

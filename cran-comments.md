@@ -33,6 +33,3 @@ As noted in [R-hub issue #503](https://github.com/r-hub/rhub/issues/503), this w
 
 ***
 
-Thanks!
-
-X. Steve Niu

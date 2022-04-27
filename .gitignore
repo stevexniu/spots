@@ -1,0 +1,20 @@
+# Ignore Rstudio files
+.Rproj.user
+.Rhistory
+.RData
+
+# Ignore system files
+.DS_Store
+
+# Ignore vignettes files
+inst/doc
+doc
+Meta
+/doc/
+/Meta/
+
+# Ignore pkgdown files
+docs
+.Rdata
+.httr-oauth
+_pkgdown.yml

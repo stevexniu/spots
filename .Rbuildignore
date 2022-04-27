@@ -1,0 +1,15 @@
+^rspca\.Rproj$
+^\.Rproj\.user$
+.gitignore
+cran-comments.md
+^\.git$
+^\.github$
+^docs$
+^pkgdown$
+^doc$
+^Meta$
+.travis.yml
+appveyor.yml
+codecov.yml
+^_pkgdown\.yml$
+vignettes

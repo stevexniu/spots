@@ -14,7 +14,7 @@ Meta
 /Meta/
 
 # Ignore pkgdown files
-docs
+#docs
 .Rdata
 .httr-oauth
 _pkgdown.yml

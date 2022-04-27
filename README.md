@@ -22,7 +22,6 @@ Usage
 See example tutorial here:
 [Get Started](https://stevexniu.github.io/rspca/articles/get_started.html)
 
-
-
+© [X. Steve Niu](https://github.com/stevexniu) from [Landau Lab](https://www.landaulab.org), Weill Cornell Medicine and New York Genome Center
 
 

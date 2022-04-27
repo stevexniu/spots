@@ -1,4 +1,5 @@
 [![AppVeyor build status](https://ci.appveyor.com/api/projects/status/github/stevexniu/rspca?branch=master&svg=true)](https://ci.appveyor.com/project/stevexniu/rspca)
+[![Build Status](https://app.travis-ci.com/stevexniu/rspca.svg?branch=master)](https://travis-ci.com/github/stevexniu/rspca)
 [![codecov](https://codecov.io/gh/stevexniu/rspca/branch/master/graph/badge.svg?token=OXK8ZT3QH1)](https://codecov.io/gh/stevexniu/rspca)
 
 # rspca: Spatial Component Analysis

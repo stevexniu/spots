@@ -20,16 +20,8 @@ Possibly misspelled words in DESCRIPTION:
   omics (10:70)
   transcriptome (10:118)
 ```
+
 This is a new release and the word *transcriptome* is spelt correctly as in [Transcriptome_Wikipedia](https://en.wikipedia.org/wiki/Transcriptome), the same is *omics* as in [Omics_Wikipedia](https://en.wikipedia.org/wiki/omics).
-
-* There is another NOTE that was found only on Windows (Server 2022, R-devel, 64 bit):
-
-```
-> checking for detritus in the temp directory ... NOTE
-  Found the following files/directories:
-    'lastMiKTeXException'
-```
-As noted in [R-hub issue #503](https://github.com/r-hub/rhub/issues/503), this was due to a bug/crash in MiKTeX and can be ignored.
 
 ***
 

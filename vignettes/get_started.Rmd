@@ -167,7 +167,7 @@ p2 <- SpatialFeaturePlot(cluster4, c(head(rownames(de.genes),2), tail(rownames(d
 p1 + p2
 ```
 </details>
-\
+\  
 
 ### Session Information
 ```{r session}

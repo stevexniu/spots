@@ -1,10 +1,10 @@
 ---
-title: "Get started with Visium Brain data"
-output: rmarkdown::html_vignette
-vignette: >
-  %\VignetteIndexEntry{Get started with Visium Brain data}
-  %\VignetteEngine{knitr::rmarkdown}
-  %\VignetteEncoding{UTF-8}
+title: 'Get started with Visium Brain data'
+date: 'Last Run: `r format(Sys.Date(), "%B %d, %Y")`'
+output:
+  html_document:
+    theme: united
+    df_print: kable
 ---
 
 ```{r, include = FALSE}
@@ -117,7 +117,7 @@ chi.resid <- unclass(chi.result$residuals)
 
 # Data for visualization
 data.plot <- Seurat:::Melt(chi.resid)
-colnames(data.plot)[1:3] <- c("SCA clustering", "PCA clustering", "Agreement")
+colnames(data.plot)[1:3] <- c("SCA clustering", "PCA clustering", "Chi-square Residual")
 
 # Reorder the columns
 data.plot[,1] <- factor(data.plot[,1], 
@@ -126,15 +126,50 @@ data.plot[,1] <- factor(data.plot[,1],
 data.plot[,2] <- factor(data.plot[,2], levels = unique(as.numeric(data.plot[,2])), ordered = TRUE)
 
 # Heatmap
-ggplot(data = data.plot, aes(x=`PCA clustering`, y=`SCA clustering`, fill=Agreement)) + 
-  geom_tile() + cowplot::theme_cowplot(font_size = 20) 
+ggplot(data = data.plot, aes(x=`PCA clustering`, y=`SCA clustering`, fill=`Chi-square Residual`)) + 
+  geom_tile() + cowplot::theme_cowplot(font_size = 20) + labs(fill="Chi-square\nResidual")
+
 ```
 
 ### Conclusion
 For this data, the clustering results based on SCA and PCA in general agree with each other. However, as we noted PCA cluster 4, 9 and 10 were split by the SCA each into two distinct groups. 
 
-Here, we will go through them in detail at whether SCA made a false discovery.
+Here, we will go through one of them in detail to check whether SCA made a false discovery or PCA underestimated certain distinct clusters.
+
+<details>
+  <summary>**PCA Cluster 4 vs SCA Cluster 10 and 14**</summary>
+
+```{r, fig.height=4, fig.width=8}
+cluster4 <- subset(posterior1, pca.snn_res.1 == 4 & sca.snn_res.1 %in% c(10, 14))
+cluster4$sca.snn_res.1 <- factor(cluster4$sca.snn_res.1)
+cluster4$pca.snn_res.1 <- factor(cluster4$pca.snn_res.1)
+p1 <- SpatialDimPlot(cluster4, group.by = "pca.snn_res.1", pt.size.factor = 3, 
+                     label = TRUE, label.size = 5) + 
+  ggtitle("PCA Clustering") + NoLegend() + 
+  theme(plot.title = element_text(size = 15, face = 2, hjust = 0.5))
+p2 <- SpatialDimPlot(cluster4, group.by = "sca.snn_res.1", pt.size.factor = 3, 
+                     label = TRUE, label.size = 5) + 
+  ggtitle("SCA Clustering") + NoLegend() + 
+  theme(plot.title = element_text(size = 15, face = 2, hjust = 0.5))
+p1 + p2
+```
+
+We can examine the differentially expressed genes between cluster 10 and 14 from SCA clustering.
+We see that these are heterogeneous populations marked by different gene expressions.
+```{r, fig.height=8, fig.width=12}
+de.genes <- FindMarkers(cluster4, 14, 10, group.by = "sca.snn_res.1", verbose = FALSE)
+de.genes <- de.genes[de.genes$p_val_adj < 0.05, ]
+de.genes <- de.genes[order(de.genes$avg_log2FC),]
+cluster4 <- ScaleData(cluster4, features = rownames(de.genes))
+p1 <- DoHeatmap(cluster4, rownames(de.genes), group.by = "sca.snn_res.1")
+p2 <- SpatialFeaturePlot(cluster4, c(head(rownames(de.genes),2), tail(rownames(de.genes),2)),
+                         pt.size.factor = 3)
+p1 + p2
+```
+</details>
+\
+
+### Session Information
 ```{r session}
 print(sessionInfo())
 ```
-

@@ -6,6 +6,8 @@
 \alias{_PACKAGE}
 \title{rspca: Spatial Component Analysis in R}
 \description{
+\if{html}{\figure{logo.png}{options: align='right' alt='logo' width='120'}}
+
 An R package for spatial component analysis and spatial omics data analysis. See Integrated protein and transcriptome high-throughput spatial profiling (2022) <doi:10.1101/2022.03.15.484516> for more details.
 }
 \seealso{

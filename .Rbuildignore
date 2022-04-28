@@ -15,5 +15,4 @@ codecov.yml
 vignettes
 ^LICENSE\.md$
 ^CRAN-SUBMISSION$
-^NEWS\.md$
 ^README\.md$

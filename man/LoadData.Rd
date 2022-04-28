@@ -12,7 +12,7 @@ LoadData(data.use = c("Visium.HNN", "Visium.Brain"))
 \item Visium.HNN, hexagonal nearest neighbor distance matrix of
 \href{https://www.10xgenomics.com/spatial-transcriptomics}{10x Visium} 4992 whitelist spatial barcodes.
 \item Visium.Brain, sample \href{https://www.10xgenomics.com/resources/datasets/mouse-brain-serial-section-1-sagittal-posterior-1-standard-1-0-0}{10x Visium Sagittal-Posterior Mouse Brain}
-data with 3353 spatial barcodes and 2000 highly variable genes, load as a \href{Seurat object}{https://satijalab.org/seurat/articles/spatial_vignette.html}.
+data with 3353 spatial barcodes and 2000 highly variable genes, load as a \href{https://satijalab.org/seurat/articles/spatial_vignette.html}{Seurat object}.
 }}
 }
 \value{

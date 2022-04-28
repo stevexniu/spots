@@ -2,7 +2,7 @@
 
 language: r
 cache: packages
-sudo: required
+sudo: true
 warnings_are_errors: false
 
 os:
@@ -15,22 +15,16 @@ r:
 
 r_packages:
   - covr
-  - devtools
-  - testthat
 
 matrix:
   exclude:
     - r: devel
       os: osx
 
-script:
-  - R CMD build --no-build-vignettes --no-manual .
-  - R CMD check --no-build-vignettes --no-manual *tar.gz
+env:
+  global:
+    - _R_CHECK_FORCE_SUGGESTS_=FALSE
+    - R_BUILD_ARGS="--no-build-vignettes --no-manual"
 
 after_success:
   - travis_wait Rscript -e "covr::codecov(token='3b39660c-b824-4950-b1e7-dedcddaf9eb2')"
-
-notifications:
-  email:
-    on_success: change
-    on_failure: change

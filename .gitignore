@@ -18,3 +18,6 @@ Meta
 .Rdata
 .httr-oauth
 _pkgdown.yml
+
+# Ignore CRAN submission
+CRAN-SUBMISSION

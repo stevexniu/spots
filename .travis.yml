@@ -6,20 +6,21 @@ sudo: true
 warnings_are_errors: false
 
 os:
-  - osx
+#  - osx
   - linux
 
 r:
+  - oldrel
   - release
   - devel
 
 r_packages:
   - covr
 
-matrix:
-  exclude:
-    - r: devel
-      os: osx
+#matrix:
+#  exclude:
+#    - r: devel
+#      os: osx
 
 env:
   global:

@@ -7,7 +7,7 @@
 LoadData(data.use = c("Visium.HNN", "Visium.Brain"))
 }
 \arguments{
-\item{data.use}{Selected data to load. See \code{\link[rspca]{available.data}}.
+\item{data.use}{Selected data to load. See \code{\link[spots]{available.data}}.
 \itemize{
 \item Visium.HNN, hexagonal nearest neighbor distance matrix of
 \href{https://www.10xgenomics.com/spatial-transcriptomics}{10x Visium} 4992 whitelist spatial barcodes.

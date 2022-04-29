@@ -11,7 +11,7 @@ FitMoransI(X, Y, I, all = FALSE)
 
 \item{Y}{A matrix of spatial lags.}
 
-\item{I}{A matrix of Moran's I, output by \code{\link[rspca]{OLSMoransI}}..}
+\item{I}{A matrix of Moran's I, output by \code{\link[spots]{OLSMoransI}}..}
 
 \item{all}{Whether to use multivariate Moran's I, default is \code{FALSE}.}
 }

@@ -44,10 +44,4 @@ A list containing the following:
 \description{
 Calculate permutation based p-value for spatial lag.
 }
-\examples{
-\dontrun{
-res <- PermutationLag(x, W, R = 999)
-}
-
-}
 \keyword{internal}

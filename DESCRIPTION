@@ -1,5 +1,5 @@
-Package: rspca
-Title: Spatial Component Analysis in R
+Package: spots
+Title: Spatial Component Analysis
 Version: 0.1.0
 Authors@R: 
     person(given = "X. Steve",
@@ -7,11 +7,11 @@ Authors@R:
            role = c("aut", "cre"),
            email = "xin2001@med.cornell.edu",
            comment = c(ORCID = "0000-0001-7689-0941"))
-Description: An R package for spatial component analysis and spatial omics data analysis. See Integrated protein and transcriptome high-throughput spatial profiling (2022) <doi:10.1101/2022.03.15.484516> for more details.
+Description: Spatial component analysis and spatial omics data analysis. See Integrated protein and transcriptome high-throughput spatial profiling (2022) <doi:10.1101/2022.03.15.484516> for more details.
 Maintainer: X. Steve Niu <xin2001@med.cornell.edu>
-BugReports: https://github.com/stevexniu/rspca/issues
+BugReports: https://github.com/stevexniu/spots/issues
 Depends: R (>= 4.0.0)
-License: GPL-3 | file LICENSE
+License: GPL-3
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)

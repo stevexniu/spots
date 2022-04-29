@@ -1,4 +1,4 @@
 library(testthat)
-library(rspca)
+library(spots)
 
-test_check("rspca")
+test_check("spots")

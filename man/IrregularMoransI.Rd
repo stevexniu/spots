@@ -24,7 +24,7 @@ IrregularMoransI(
 
 \item{group2}{The indices or names for the second group of observations.}
 
-\item{OLS}{Whether to use \code{\link[rspca]{OLSMoransI}}, default is \code{FALSE} and \code{\link[rspca]{BivariateMoransI}} is used.}
+\item{OLS}{Whether to use \code{\link[spots]{OLSMoransI}}, default is \code{FALSE} and \code{\link[spots]{BivariateMoransI}} is used.}
 
 \item{normalize}{Whether to normalize the weight matrix such that each row adds up to one. Default is \code{TRUE}.}
 
@@ -33,7 +33,7 @@ IrregularMoransI(
 \item{p.adjust.method}{Method used for multiple comparisons correction, default is \code{BH}. See \code{\link[stats]{p.adjust}}.}
 }
 \value{
-A list containing the output from \code{\link[rspca]{BivariateMoransI}} or \code{\link[rspca]{OLSMoransI}}.
+A list containing the output from \code{\link[spots]{BivariateMoransI}} or \code{\link[spots]{OLSMoransI}}.
 }
 \description{
 Calculate Moran's I between two groups with irregular data shape.

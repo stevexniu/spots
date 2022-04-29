@@ -17,7 +17,7 @@ A data frame with 2 rows (datasets) and 4 columns (attributes):
 available.data
 }
 \description{
-Available data can be loaded using \code{\link[rspca]{LoadData}} function.
+Available data can be loaded using \code{\link[spots]{LoadData}} function.
 }
 \concept{data}
 \keyword{datasets}

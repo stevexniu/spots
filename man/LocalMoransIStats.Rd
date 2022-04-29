@@ -23,11 +23,6 @@ A list containing the following:
 \description{
 Calculate theoretical expectation and standard deviation of local Moran's I under the null hypothesis.
 }
-\examples{
-\dontrun{
-LocalMoransIStats(X, W)
-}
-}
 \references{
 Anselin, L. Local indicators of spatial association-LISA. Geogr. Anal. 27, 93–115 (1995)
 

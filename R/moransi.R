@@ -211,7 +211,7 @@ OLSMoransI <- function(X, W, normalize = TRUE, alternative = c("two.sided", "les
 #'
 #' @param X A matrix with observations as rows and features as columns.
 #' @param Y A matrix of spatial lags.
-#' @param I A matrix of Moran's I, output by \code{\link[rspca]{OLSMoransI}}..
+#' @param I A matrix of Moran's I, output by \code{\link[spots]{OLSMoransI}}..
 #' @param all Whether to use multivariate Moran's I, default is \code{FALSE}.
 #' @return A list containing the following:
 #' \itemize{
@@ -289,11 +289,11 @@ IrregularData <- function(X, W, group1, group2){
 #' @param W A weight matrix across all observations, i.e inverse of a pairwise distance matrix.
 #' @param group1 The indices or names for the first group of observations.
 #' @param group2 The indices or names for the second group of observations.
-#' @param OLS Whether to use \code{\link[rspca]{OLSMoransI}}, default is \code{FALSE} and \code{\link[rspca]{BivariateMoransI}} is used.
+#' @param OLS Whether to use \code{\link[spots]{OLSMoransI}}, default is \code{FALSE} and \code{\link[spots]{BivariateMoransI}} is used.
 #' @param normalize Whether to normalize the weight matrix such that each row adds up to one. Default is \code{TRUE}.
 #' @param alternative Alternative hypothesis used, default is \code{two.sided}.
 #' @param p.adjust.method Method used for multiple comparisons correction, default is \code{BH}. See \code{\link[stats]{p.adjust}}.
-#' @return A list containing the output from \code{\link[rspca]{BivariateMoransI}} or \code{\link[rspca]{OLSMoransI}}.
+#' @return A list containing the output from \code{\link[spots]{BivariateMoransI}} or \code{\link[spots]{OLSMoransI}}.
 #' @export
 #' @concept moransi
 #' @examples \dontrun{

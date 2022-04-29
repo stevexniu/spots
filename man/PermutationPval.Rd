@@ -33,11 +33,4 @@ A list containing the following:
 \description{
 Calculate permutation based p-values.
 }
-\examples{
-\dontrun{
-res <- PermutationPval(x, X.perm)
-}
-
-
-}
 \keyword{internal}

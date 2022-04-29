@@ -4,7 +4,7 @@
 NULL
 
 #' @docType package
-#' @name rspca-package
-#' @rdname rspca-package
-#' @aliases rspca-package
+#' @name spots-package
+#' @rdname spots-package
+#' @aliases spots-package
 "_PACKAGE"

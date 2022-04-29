@@ -30,6 +30,6 @@ imputed.data <- HnnImpute(data, dist.hnn)
 
 }
 \seealso{
-\code{\link[rspca]{HnnWeight}}
+\code{\link[spots]{HnnWeight}}
 }
 \concept{hnn}

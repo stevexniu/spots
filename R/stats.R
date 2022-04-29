@@ -16,9 +16,6 @@ NULL
 #'   \item SD.I, the standard deviation of Moran's I under the null hypothesis.
 #' }
 #' @concept stats
-#' @examples \dontrun{
-#' BivariateMoransIStats(X, W)
-#' }
 #' @references
 #' Czaplewski, R. L. Expected Value and Variance of Moran’s Bivariate Spatial Autocorrelation Statistic for a Permutation Test.
 #' (U.S. Department of Agriculture, Forest Service, Rocky Mountain Forest and Range Experiment Station, 1993).
@@ -69,9 +66,6 @@ BivariateMoransIStats <- function(X, W){
 #'   \item SD.I, the standard deviation of local Moran's I under the null hypothesis.
 #' }
 #' @concept stats
-#' @examples \dontrun{
-#' LocalMoransIStats(X, W)
-#' }
 #' @references
 #' Anselin, L. Local indicators of spatial association-LISA. Geogr. Anal. 27, 93–115 (1995)
 #'
@@ -109,9 +103,6 @@ LocalMoransIStats <- function(X, W, scale = FALSE){
 #'   \item p.adj, a matrix of adjusted p-values.
 #' }
 #' @concept stats
-#' @examples \dontrun{
-#' ZPvalue(Z)
-#' }
 #'
 ZPvalue <- function(Z, alternative = c("two.sided", "less", "greater"), p.adjust.method = "BH"){
   if (alternative == "two.sided") {
@@ -196,10 +187,6 @@ PermutationCorr <- function(x, y, R = 999, seed = 1, return.permutation = FALSE)
 #'   \item p.adj, adjusted p-values.
 #' }
 #' @keywords internal
-#' @examples \dontrun{
-#' res <- PermutationPval(x, X.perm)
-#' }
-#'
 #'
 PermutationPval <- function(x, X.perm, alternative = c("two.sided", "less", "greater"), p.adjust.method = "BH", condition = 0){
   `%>=%` <- function(x, y, e=1e-10) x + e > y
@@ -244,9 +231,6 @@ PermutationPval <- function(x, X.perm, alternative = c("two.sided", "less", "gre
 #'   \item return.permutation, permutation used if returned.
 #' }
 #' @keywords internal
-#' @examples \dontrun{
-#' res <- PermutationLag(x, W, R = 999)
-#' }
 #'
 PermutationLag <- function(x, W, n = 999, seed = 1, alternative = c("two.sided", "less", "greater"), p.adjust.method = "BH",
                            condition = 0, return.permutation = FALSE){

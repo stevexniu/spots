@@ -49,9 +49,6 @@ HnnNeighbor <- function(dist.hnn, k, include.self = TRUE){
 #' @param include.self Whether to include self as 1st neighbor, default is \code{TRUE}.
 #' @return An n x k matrix for the nearest neighbor indice.
 #' @keywords internal
-#' @examples \dontrun{
-#' HnnNeighborIndex(dist.hnn, k = 10)
-#' }
 #'
 HnnNeighborIndex <- function(dist.hnn, k, include.self = TRUE){
   k.start <- ifelse(test = include.self, yes = 1, no = 2)
@@ -71,6 +68,7 @@ HnnNeighborIndex <- function(dist.hnn, k, include.self = TRUE){
 #' @param dist.k The maximum distance used to calculate the weight. Default is \code{NULL} and all neighbor weights are calculated.
 #' @param mu The mean of Gaussian filter, default is 0.
 #' @param sigma The standard deviation of Gaussian filter, default is 1.
+#' @return A weight matrix.
 #' @importFrom stats dnorm
 #' @export
 #' @concept hnn
@@ -94,7 +92,7 @@ HnnWeight <- function(dist.hnn, dist.k = NULL, mu = 0, sigma=1){
 #' @param mu The mean of Gaussian filter, default is 0.
 #' @param sigma The standard deviation of Gaussian filter, default is 1.
 #' @return Imputed data.
-#' @seealso \code{\link[rspca]{HnnWeight}}
+#' @seealso \code{\link[spots]{HnnWeight}}
 #' @export
 #' @concept hnn
 #' @examples \dontrun{
@@ -115,7 +113,7 @@ HnnImpute <- function(data, dist.hnn, dist.k = NULL, mu = 0, sigma=1){
 #'
 #' @param barcodes 10x Visium whitelisted spatial barcodes.
 #' @return A hexagonal distance matrix for selected barcodes.
-#' @seealso \code{\link[rspca]{LoadData}}.
+#' @seealso \code{\link[spots]{LoadData}}.
 #' @export
 #' @concept hnn
 #' @examples \dontrun{

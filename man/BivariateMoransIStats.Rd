@@ -21,11 +21,6 @@ A list containing the following:
 \description{
 Calculate theoretical expectation and standard deviation of bivariate Moran's I under the null hypothesis.
 }
-\examples{
-\dontrun{
-BivariateMoransIStats(X, W)
-}
-}
 \references{
 Czaplewski, R. L. Expected Value and Variance of Moran’s Bivariate Spatial Autocorrelation Statistic for a Permutation Test.
 (U.S. Department of Agriculture, Forest Service, Rocky Mountain Forest and Range Experiment Station, 1993).

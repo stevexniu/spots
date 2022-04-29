@@ -23,6 +23,6 @@ VisiumHnn(barcodes)
 
 }
 \seealso{
-\code{\link[rspca]{LoadData}}.
+\code{\link[spots]{LoadData}}.
 }
 \concept{hnn}

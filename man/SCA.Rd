@@ -13,7 +13,7 @@ SCA(X, W, n.eigen = 20, method = c("L", "M"), scaled.data = NULL, ...)
 
 \item{n.eigen}{Number of spatial components (eigenvectors) to compute. Default is 20.}
 
-\item{method}{Method used to calculate spatial cross-correlation. See \code{\link[rspca]{SpatialXCorr}}.
+\item{method}{Method used to calculate spatial cross-correlation. See \code{\link[spots]{SpatialXCorr}}.
 \itemize{
 \item M, using the Wartenburg's M (Default).
 \item L, using the Lee's L.
@@ -29,7 +29,7 @@ A list of Spatial Component Analysis results.
 \item X, raw or scaled input data.
 \item rotation, computed eigenvectors.
 \item eigenvalues, computed eigenvalues.
-\item xcor, spatial cross-correlation matrix calculated using \code{\link[rspca]{SpatialXCorr}}.
+\item xcor, spatial cross-correlation matrix calculated using \code{\link[spots]{SpatialXCorr}}.
 }
 }
 \description{

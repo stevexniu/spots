@@ -1,7 +1,7 @@
-^rspca\.Rproj$
+^.*\.Rproj$
 ^\.Rproj\.user$
 .gitignore
-cran-comments.md
+^cran-comments\.md$
 ^\.git$
 ^\.github$
 ^docs$
@@ -13,6 +13,5 @@ appveyor.yml
 codecov.yml
 ^_pkgdown\.yml$
 vignettes
-^LICENSE\.md$
 ^CRAN-SUBMISSION$
 ^README\.md$

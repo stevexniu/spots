@@ -2,7 +2,7 @@
 [![Build Status](https://app.travis-ci.com/stevexniu/rspca.svg?branch=master)](https://app.travis-ci.com/stevexniu/rspca)
 [![codecov](https://codecov.io/gh/stevexniu/rspca/branch/master/graph/badge.svg?token=OXK8ZT3QH1)](https://codecov.io/gh/stevexniu/rspca)
 
-# rspca: Spatial Component Analysis <img src="man/figures/logo.png" align="right" width="150"/>
+# spots: Spatial Component Analysis <img src="man/figures/logo.png" align="right" width="150"/>
 
 An R package for spatial component analysis (SCA) and spatial omics data analysis. 
 
@@ -13,12 +13,12 @@ Installation
 
 ``` r
 install.packages("devtools")
-devtools::install_github("stevexniu/rspca")
+devtools::install_github("stevexniu/spots")
 ```
 
 Usage
 -----
 See example tutorial here:
-[Get Started](https://stevexniu.github.io/rspca/articles/get_started.html)
+[Get Started](https://stevexniu.github.io/spots/articles/get_started.html)
 
 © [X. Steve Niu](https://github.com/stevexniu) from [Landau Lab](https://www.landaulab.org), Weill Cornell Medicine and New York Genome Center

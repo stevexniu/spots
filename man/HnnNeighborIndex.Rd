@@ -19,10 +19,4 @@ An n x k matrix for the nearest neighbor indice.
 \description{
 Get hexagonal nearest neighbor indices.
 }
-\examples{
-\dontrun{
-HnnNeighborIndex(dist.hnn, k = 10)
-}
-
-}
 \keyword{internal}

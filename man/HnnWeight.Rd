@@ -15,6 +15,9 @@ HnnWeight(dist.hnn, dist.k = NULL, mu = 0, sigma = 1)
 
 \item{sigma}{The standard deviation of Gaussian filter, default is 1.}
 }
+\value{
+A weight matrix.
+}
 \description{
 Calculate hexagonal nearest neighbor weights using Gaussian filter.
 }

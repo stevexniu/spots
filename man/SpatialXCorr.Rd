@@ -37,6 +37,6 @@ Lee, S.-I. Developing a bivariate spatial association measure:
 An integration of Pearson’s r and Moran's I. J. Geogr. Syst. 3, 369–385 (2001)
 }
 \seealso{
-\code{\link[rspca]{WartenbergM}} \code{\link[rspca]{LeeL}}.
+\code{\link[spots]{WartenbergM}} \code{\link[spots]{LeeL}}.
 }
 \concept{sca}

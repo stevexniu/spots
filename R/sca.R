@@ -70,7 +70,7 @@ LeeL <- function(X, W){
 #' @return A spatial cross-correlation matrix.
 #' @export
 #' @concept sca
-#' @seealso \code{\link[rspca]{WartenbergM}} \code{\link[rspca]{LeeL}}.
+#' @seealso \code{\link[spots]{WartenbergM}} \code{\link[spots]{LeeL}}.
 #' @examples \dontrun{
 #' M <- SpatialXCorr(X, W, method = "M")
 #' L <- SpatialXCorr(X, W, method = "L")
@@ -97,7 +97,7 @@ SpatialXCorr <- function(X, W, method = c("M", "L")){
 #' @param X A matrix with observations as rows and features as columns.
 #' @param W A weight matrix across all observations, i.e inverse of a pairwise distance matrix.
 #' @param n.eigen Number of spatial components (eigenvectors) to compute. Default is 20.
-#' @param method Method used to calculate spatial cross-correlation. See \code{\link[rspca]{SpatialXCorr}}.
+#' @param method Method used to calculate spatial cross-correlation. See \code{\link[spots]{SpatialXCorr}}.
 #' \itemize{
 #'   \item M, using the Wartenburg's M (Default).
 #'   \item L, using the Lee's L.
@@ -109,7 +109,7 @@ SpatialXCorr <- function(X, W, method = c("M", "L")){
 #'   \item X, raw or scaled input data.
 #'   \item rotation, computed eigenvectors.
 #'   \item eigenvalues, computed eigenvalues.
-#'   \item xcor, spatial cross-correlation matrix calculated using \code{\link[rspca]{SpatialXCorr}}.
+#'   \item xcor, spatial cross-correlation matrix calculated using \code{\link[spots]{SpatialXCorr}}.
 #' }
 #' @export
 #' @concept sca

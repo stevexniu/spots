@@ -3,8 +3,8 @@ pkgdown: 2.0.2
 pkgdown_sha: ~
 articles:
   get_started: get_started.html
-last_built: 2022-04-29T17:40Z
+last_built: 2022-04-29T22:03Z
 urls:
-  reference: https://stevexniu.github.io/rspca/reference
-  article: https://stevexniu.github.io/rspca/articles
+  reference: https://stevexniu.github.io/spots/reference
+  article: https://stevexniu.github.io/spots/articles
 

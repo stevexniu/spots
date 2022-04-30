@@ -4,7 +4,7 @@
 
 # spots: Spatial Component Analysis <img src="man/figures/logo.png" align="right" width="150"/>
 
-The spots package is designed for spatial omics (10x Visium, etc.) data analysis. 
+The **```spots```** package is designed for spatial omics (10x Visium, etc.) data analysis. 
 
 It performs various statistical analyses and tests, including spatial component analysis (SCA), both global and local spatial statistics, such as univariate and bivariate Moran's I, Getis-Ord Gi* statistics, etc.
 

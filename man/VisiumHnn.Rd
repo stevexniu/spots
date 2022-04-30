@@ -7,7 +7,7 @@
 VisiumHnn(path, barcodes)
 }
 \arguments{
-\item{path}{Path to downloaded HNN distance for Visium barcodes. See \code{\link[spots]{available.data}} for download url.}
+\item{path}{Path to the directory contains or to download the HNN distance for Visium barcodes, i.e. "~/Downloads".}
 
 \item{barcodes}{10x Visium whitelisted spatial barcodes.}
 }
@@ -25,6 +25,6 @@ VisiumHnn("~/Downloads/", barcodes)
 
 }
 \seealso{
-\code{\link[spots]{available.data}}.
+\code{\link[spots]{available.data}}  \code{\link[spots]{LoadData}}.
 }
 \concept{hnn}

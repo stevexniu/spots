@@ -111,8 +111,10 @@ Edge detection in a hexagonal-image processing framework. Image Vis. Comput. 19,
 
     <div id="ref-examples">
     <h2>Examples</h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span class="kw">if</span> <span class="op">(</span><span class="cn">FALSE</span><span class="op">)</span> <span class="op">{</span></span>
-<span class="r-in"><span class="fu">HnnNeighbor</span><span class="op">(</span><span class="va">dist.hnn</span>, k <span class="op">=</span> <span class="fl">10</span><span class="op">)</span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span class="op">{</span></span>
+<span class="r-in"><span class="va">data.use</span> <span class="op">&lt;-</span> <span class="va">quakes</span><span class="op">[</span><span class="fl">1</span><span class="op">:</span><span class="fl">100</span>,<span class="op">]</span></span>
+<span class="r-in"><span class="va">dist.use</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/matrix.html" class="external-link">as.matrix</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/dist.html" class="external-link">dist</a></span><span class="op">(</span><span class="va">data.use</span><span class="op">[</span>,<span class="fl">1</span><span class="op">:</span><span class="fl">2</span><span class="op">]</span><span class="op">)</span><span class="op">)</span></span>
+<span class="r-in"><span class="va">res</span> <span class="op">&lt;-</span> <span class="fu">HnnNeighbor</span><span class="op">(</span><span class="va">dist.use</span>, k <span class="op">=</span> <span class="fl">10</span><span class="op">)</span></span>
 <span class="r-in"><span class="op">}</span></span>
 </code></pre></div>
     </div>

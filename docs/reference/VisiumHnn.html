@@ -85,12 +85,14 @@
     </div>
 
     <div id="ref-usage">
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="fu">VisiumHnn</span><span class="op">(</span><span class="va">barcodes</span><span class="op">)</span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="fu">VisiumHnn</span><span class="op">(</span><span class="va">path</span>, <span class="va">barcodes</span><span class="op">)</span></code></pre></div>
     </div>
 
     <div id="arguments">
     <h2>Arguments</h2>
-    <dl><dt>barcodes</dt>
+    <dl><dt>path</dt>
+<dd><p>Path to the directory contains or to download the HNN distance for Visium barcodes, i.e. "~/Downloads".</p></dd>
+<dt>barcodes</dt>
 <dd><p>10x Visium whitelisted spatial barcodes.</p></dd>
 </dl></div>
     <div id="value">
@@ -99,14 +101,14 @@
     </div>
     <div id="see-also">
     <h2>See also</h2>
-    <div class="dont-index"><p><code>LoadData</code>.</p></div>
+    <div class="dont-index"><p><code><a href="available.data.html">available.data</a></code>  <code><a href="LoadData.html">LoadData</a></code>.</p></div>
     </div>
 
     <div id="ref-examples">
     <h2>Examples</h2>
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span class="kw">if</span> <span class="op">(</span><span class="cn">FALSE</span><span class="op">)</span> <span class="op">{</span></span>
 <span class="r-in"><span class="va">barcodes</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"AAACAACGAATAGTTC-1"</span>, <span class="st">"AAACTTAATTGCACGC-1"</span><span class="op">)</span></span>
-<span class="r-in"><span class="fu">VisiumHnn</span><span class="op">(</span><span class="va">barcodes</span><span class="op">)</span></span>
+<span class="r-in"><span class="fu">VisiumHnn</span><span class="op">(</span><span class="st">"~/Downloads/"</span>, <span class="va">barcodes</span><span class="op">)</span></span>
 <span class="r-in"><span class="op">}</span></span>
 <span class="r-in"></span>
 </code></pre></div>

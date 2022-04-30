@@ -107,8 +107,11 @@
 
     <div id="ref-examples">
     <h2>Examples</h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span class="kw">if</span> <span class="op">(</span><span class="cn">FALSE</span><span class="op">)</span> <span class="op">{</span></span>
-<span class="r-in"><span class="fu">IrregularData</span><span class="op">(</span><span class="va">X</span>, <span class="va">W</span>, <span class="fl">1</span><span class="op">:</span><span class="fl">10</span>, <span class="fl">101</span><span class="op">:</span><span class="fl">110</span><span class="op">)</span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span class="op">{</span></span>
+<span class="r-in"><span class="va">data.use</span> <span class="op">&lt;-</span> <span class="va">quakes</span><span class="op">[</span><span class="fl">1</span><span class="op">:</span><span class="fl">100</span>,<span class="op">]</span></span>
+<span class="r-in"><span class="va">W</span> <span class="op">&lt;-</span> <span class="fl">1</span><span class="op">/</span><span class="fu"><a href="https://rdrr.io/r/base/matrix.html" class="external-link">as.matrix</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/dist.html" class="external-link">dist</a></span><span class="op">(</span><span class="va">data.use</span><span class="op">[</span>,<span class="fl">1</span><span class="op">:</span><span class="fl">2</span><span class="op">]</span><span class="op">)</span><span class="op">)</span></span>
+<span class="r-in"><span class="fu"><a href="https://rdrr.io/r/base/diag.html" class="external-link">diag</a></span><span class="op">(</span><span class="va">W</span><span class="op">)</span> <span class="op">&lt;-</span> <span class="fl">0</span></span>
+<span class="r-in"><span class="va">res</span> <span class="op">&lt;-</span> <span class="fu">IrregularData</span><span class="op">(</span><span class="va">data.use</span><span class="op">[</span>,<span class="fl">3</span><span class="op">:</span><span class="fl">4</span><span class="op">]</span>, <span class="va">W</span>, <span class="fl">1</span><span class="op">:</span><span class="fl">10</span>, <span class="fl">21</span><span class="op">:</span><span class="fl">30</span><span class="op">)</span></span>
 <span class="r-in"><span class="op">}</span></span>
 <span class="r-in"></span>
 </code></pre></div>

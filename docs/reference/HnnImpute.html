@@ -112,8 +112,11 @@
 
     <div id="ref-examples">
     <h2>Examples</h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span class="kw">if</span> <span class="op">(</span><span class="cn">FALSE</span><span class="op">)</span> <span class="op">{</span></span>
-<span class="r-in"><span class="va">imputed.data</span> <span class="op">&lt;-</span> <span class="fu">HnnImpute</span><span class="op">(</span><span class="va">data</span>, <span class="va">dist.hnn</span><span class="op">)</span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span class="op">{</span></span>
+<span class="r-in"><span class="va">data.use</span> <span class="op">&lt;-</span> <span class="va">quakes</span><span class="op">[</span><span class="fl">1</span><span class="op">:</span><span class="fl">100</span>,<span class="op">]</span></span>
+<span class="r-in"><span class="va">dist.use</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/matrix.html" class="external-link">as.matrix</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/dist.html" class="external-link">dist</a></span><span class="op">(</span><span class="va">data.use</span><span class="op">[</span>,<span class="fl">1</span><span class="op">:</span><span class="fl">2</span><span class="op">]</span><span class="op">)</span><span class="op">)</span></span>
+<span class="r-in"><span class="co"># transpose the data to have features in rows and observations in columns</span></span>
+<span class="r-in"><span class="va">res</span> <span class="op">&lt;-</span> <span class="fu">HnnImpute</span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/t.html" class="external-link">t</a></span><span class="op">(</span><span class="va">data.use</span><span class="op">[</span>,<span class="fl">3</span><span class="op">:</span><span class="fl">4</span><span class="op">]</span><span class="op">)</span>, <span class="va">dist.use</span><span class="op">)</span></span>
 <span class="r-in"><span class="op">}</span></span>
 <span class="r-in"></span>
 </code></pre></div>

@@ -50,7 +50,7 @@ To turn this distance matrix to a weight matrix, we call `HnnWeight` function to
 I'm using parameter `dist.k = 2` to consider only the 2nd-degree neighbors and `sigma = 2` for filter width.
 ```{r hnn}
 # HNN distance 
-posterior1.hnn.dist <- VisiumHnn(Cells(posterior1))
+posterior1.hnn.dist <- VisiumHnn("~/Downloads/", Cells(posterior1))
 
 # HNN weights
 posterior1.data.hnn <- HnnNeighbor(posterior1.hnn.dist, k = 19, include.self = FALSE)
@@ -135,8 +135,8 @@ ggplot(data = data.plot, aes(x=`PCA clustering`, y=`SCA clustering`, fill=`Chi-s
 For this data, the clustering results based on SCA and PCA in general agree with each other. However, as we noted PCA cluster 4, 9 and 10 were split by the SCA each into two distinct groups. 
 
 Here, we will go through one of them in detail to check whether SCA made a false discovery or PCA underestimated certain distinct clusters.
-<details> 
-  <summary>**PCA Cluster 4 vs SCA Cluster 10 and 14**<\summary>
+
+PCA Cluster 4 vs SCA Cluster 10 and 14
 ```{r cluster-4, fig.height=4, fig.width=8}
 cluster4 <- subset(posterior1, pca.snn_res.1 == 4 & sca.snn_res.1 %in% c(10, 14))
 cluster4$sca.snn_res.1 <- factor(cluster4$sca.snn_res.1)
@@ -164,8 +164,6 @@ p2 <- SpatialFeaturePlot(cluster4, c(head(rownames(de.genes),2), tail(rownames(d
                          pt.size.factor = 3)
 p1 + p2
 ```
-<\details> 
-\  
 
 ### Session Information
 

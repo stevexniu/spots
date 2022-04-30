@@ -23,7 +23,7 @@ NULL
 #'
 #' If not previously run, it will download the selected data.
 #'
-#' @param file.path Path to the file or path to download the data into.
+#' @param file.path Path to the directory contains or to download the data object, i.e. "~/Downloads".
 #' @param data.use Selected data to load. See \code{\link[spots]{available.data}}.
 #' \itemize{
 #'   \item Visium.HNN, hexagonal nearest neighbor distance matrix of
@@ -40,7 +40,8 @@ NULL
 #'
 LoadData <- function(file.path, data.use = c("Visium.HNN", "Visium.Brain")){
   meta.data <- spots::available.data[match.arg(data.use, choices = rownames(spots::available.data)), ]
-  file.md5 <- md5sum(paste0(file.path, "/", meta.data[['filename']]))
+  file.path <- paste0(file.path, "/", meta.data[['filename']])
+  file.md5 <- md5sum(file.path)
   if(is.na(file.md5) | file.md5 != meta.data[['md5']]){
     message("Downloading ", data.use)
     download.file(url = meta.data[['url']], destfile = file.path)

@@ -7,7 +7,7 @@
 LoadData(file.path, data.use = c("Visium.HNN", "Visium.Brain"))
 }
 \arguments{
-\item{file.path}{Path to the file or path to download the data into.}
+\item{file.path}{Path to the directory contains or to download the data object, i.e. "~/Downloads".}
 
 \item{data.use}{Selected data to load. See \code{\link[spots]{available.data}}.
 \itemize{

@@ -108,6 +108,16 @@
 <p>Sokal, R. R., Oden, N. L. &amp; Thomson, B. A. Local spatial autocorrelation in a biological model. Geogr. Anal. 30, 331–354 (1998)</p>
     </div>
 
+    <div id="ref-examples">
+    <h2>Examples</h2>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span class="op">{</span></span>
+<span class="r-in"><span class="va">data.use</span> <span class="op">&lt;-</span> <span class="va">quakes</span><span class="op">[</span><span class="fl">1</span><span class="op">:</span><span class="fl">100</span>,<span class="op">]</span></span>
+<span class="r-in"><span class="va">W</span> <span class="op">&lt;-</span> <span class="fl">1</span><span class="op">/</span><span class="fu"><a href="https://rdrr.io/r/base/matrix.html" class="external-link">as.matrix</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/dist.html" class="external-link">dist</a></span><span class="op">(</span><span class="va">data.use</span><span class="op">[</span>,<span class="fl">1</span><span class="op">:</span><span class="fl">2</span><span class="op">]</span><span class="op">)</span><span class="op">)</span></span>
+<span class="r-in"><span class="fu"><a href="https://rdrr.io/r/base/diag.html" class="external-link">diag</a></span><span class="op">(</span><span class="va">W</span><span class="op">)</span> <span class="op">&lt;-</span> <span class="fl">0</span></span>
+<span class="r-in"><span class="va">res</span> <span class="op">&lt;-</span> <span class="fu">LocalMoransIStats</span><span class="op">(</span><span class="va">data.use</span><span class="op">[</span>,<span class="fl">3</span><span class="op">:</span><span class="fl">4</span><span class="op">]</span>, <span class="va">W</span><span class="op">)</span></span>
+<span class="r-in"><span class="op">}</span></span>
+</code></pre></div>
+    </div>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top"><h2 data-toc-skip>Contents</h2>

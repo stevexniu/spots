@@ -48,8 +48,11 @@ A list containing the following:
 Calculate Local Moran's I.
 }
 \examples{
-\dontrun{
-LocalMoransI(X, W)
+{
+data.use <- quakes[1:100,]
+W <- 1/as.matrix(dist(data.use[,1:2]))
+diag(W) <- 0
+res <- LocalMoransI(data.use[,3:4], W)
 }
 }
 \references{

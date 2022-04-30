@@ -24,9 +24,12 @@ A spatial cross-correlation matrix.
 Calculate spatial cross-correlation matrix.
 }
 \examples{
-\dontrun{
-M <- SpatialXCorr(X, W, method = "M")
-L <- SpatialXCorr(X, W, method = "L")
+{
+data.use <- quakes[1:100,]
+W <- 1/as.matrix(dist(data.use[,1:2]))
+diag(W) <- 0
+M <- SpatialXCorr(data.use[,3:4], W, method = "M")
+L <- SpatialXCorr(data.use[,3:4], W, method = "L")
 }
 }
 \references{

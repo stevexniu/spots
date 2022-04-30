@@ -38,8 +38,11 @@ A list containing the following:
 Calculate local Getis-Ord Gi or Gi* statistics.
 }
 \examples{
-\dontrun{
-res <- LocalGi(X, W)
+{
+data.use <- quakes[1:100,]
+W <- 1/as.matrix(dist(data.use[,1:2]))
+diag(W) <- 0
+res <- LocalGi(data.use[,3:4], W)
 }
 }
 \references{

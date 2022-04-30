@@ -23,6 +23,14 @@ A list containing the following:
 \description{
 Calculate theoretical expectation and standard deviation of local Moran's I under the null hypothesis.
 }
+\examples{
+{
+data.use <- quakes[1:100,]
+W <- 1/as.matrix(dist(data.use[,1:2]))
+diag(W) <- 0
+res <- LocalMoransIStats(data.use[,3:4], W)
+}
+}
 \references{
 Anselin, L. Local indicators of spatial association-LISA. Geogr. Anal. 27, 93–115 (1995)
 

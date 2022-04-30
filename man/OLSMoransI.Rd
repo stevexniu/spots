@@ -42,8 +42,11 @@ A list containing the following:
 Calculate Moran's I as linear regression using ordinary least squares (OLS).
 }
 \examples{
-\dontrun{
-OLSMoransI(X, W)
+{
+data.use <- quakes[1:100,]
+W <- 1/as.matrix(dist(data.use[,1:2]))
+diag(W) <- 0
+res <- OLSMoransI(data.use[,3:4], W)
 }
 }
 \references{

@@ -5,12 +5,13 @@
 \alias{available.data}
 \title{Available data}
 \format{
-A data frame with 2 rows (datasets) and 4 columns (attributes):
+A data frame with 2 rows (datasets) and 5 columns (attributes):
 \describe{
 \item{filename}{Dataset}
 \item{md5}{MD5 checksum}
 \item{url}{URL link}
 \item{date}{Date updated}
+\item{size}{Data size}
 }
 }
 \usage{

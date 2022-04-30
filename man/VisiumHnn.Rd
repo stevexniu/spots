@@ -4,9 +4,11 @@
 \alias{VisiumHnn}
 \title{10x Genomics Visium hexagonal nearest neighbor}
 \usage{
-VisiumHnn(barcodes)
+VisiumHnn(path, barcodes)
 }
 \arguments{
+\item{path}{Path to downloaded HNN distance for Visium barcodes. See \code{\link[spots]{available.data}} for download url.}
+
 \item{barcodes}{10x Visium whitelisted spatial barcodes.}
 }
 \value{
@@ -18,11 +20,11 @@ Get hexagonal nearest neighbor distance between 10x Visium spatial barcodes.
 \examples{
 \dontrun{
 barcodes <- c("AAACAACGAATAGTTC-1", "AAACTTAATTGCACGC-1")
-VisiumHnn(barcodes)
+VisiumHnn("~/Downloads/", barcodes)
 }
 
 }
 \seealso{
-\code{\link[spots]{LoadData}}.
+\code{\link[spots]{available.data}}.
 }
 \concept{hnn}

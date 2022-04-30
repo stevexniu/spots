@@ -35,8 +35,11 @@ A list containing the following:
 Calculate bivariate (multivariate) Moran's I using Wartenberg's method.
 }
 \examples{
-\dontrun{
-BivariateMoransI(X, W)
+{
+data.use <- quakes[1:100,]
+W <- 1/as.matrix(dist(data.use[,1:2]))
+diag(W) <- 0
+res <- BivariateMoransI(data.use[,3:4], W)
 }
 }
 \references{

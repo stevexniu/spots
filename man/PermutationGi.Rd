@@ -49,8 +49,11 @@ A list containing the following:
 Calculate permutation based p-value for Getis-Ord Gi or Gi* statistics.
 }
 \examples{
-\dontrun{
-res <- PermutationGi(x, W)
+{
+data.use <- quakes[1:100,]
+W <- 1/as.matrix(dist(data.use[,1:2]))
+diag(W) <- 0
+res <- PermutationGi(data.use[,3], W)
 }
 
 }

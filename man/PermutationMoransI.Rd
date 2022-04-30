@@ -38,8 +38,11 @@ A list containing the following:
 Calculate permutation based p-value for Moran's I.
 }
 \examples{
-\dontrun{
-res <- PermutationMoransI(x, W)
+{
+data.use <- quakes[1:100,]
+W <- 1/as.matrix(dist(data.use[,1:2]))
+diag(W) <- 0
+res <- PermutationMoransI(data.use[,3], W)
 }
 
 }

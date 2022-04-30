@@ -22,8 +22,10 @@ A weight matrix.
 Calculate hexagonal nearest neighbor weights using Gaussian filter.
 }
 \examples{
-\dontrun{
-HnnWeight(dist.hnn, mu = 0, sigma = 0.5)
+{
+data.use <- quakes[1:100,]
+dist.use <- as.matrix(dist(data.use[,1:2]))
+res <- HnnWeight(dist.use, mu = 0, sigma = 0.5)
 }
 
 }

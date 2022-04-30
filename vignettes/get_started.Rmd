@@ -32,7 +32,6 @@ if (!requireNamespace("Seurat", quietly = TRUE) | utils::packageVersion("Seurat"
 library(spots)
 library(Seurat)
 library(ggplot2)
-
 posterior1 <- LoadData("~/Downloads/","Visium.Brain")
 SpatialDimPlot(posterior1)
 ```

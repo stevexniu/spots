@@ -30,8 +30,11 @@ NULL
 #' }
 #' @export
 #' @concept local
-#' @examples \dontrun{
-#' LocalMoransI(X, W)
+#' @examples {
+#' data.use <- quakes[1:100,]
+#' W <- 1/as.matrix(dist(data.use[,1:2]))
+#' diag(W) <- 0
+#' res <- LocalMoransI(data.use[,3:4], W)
 #' }
 #' @references
 #' Anselin, L. Local indicators of spatial association-LISA. Geogr. Anal. 27, 93–115 (1995)
@@ -84,8 +87,11 @@ LocalMoransI <- function(X, W, normalize = TRUE, alternative = c("two.sided", "l
 #' }
 #' @export
 #' @concept local
-#' @examples \dontrun{
-#' res <- PermutationLocalI(x, W)
+#' @examples {
+#' data.use <- quakes[1:100,]
+#' W <- 1/as.matrix(dist(data.use[,1:2]))
+#' diag(W) <- 0
+#' res <- PermutationLocalI(data.use[,3], W)
 #' }
 #'
 PermutationLocalI <- function(x, W, n = 999, seed = 1, alternative = c("two.sided", "less", "greater"), p.adjust.method = "BH",
@@ -126,8 +132,11 @@ PermutationLocalI <- function(x, W, n = 999, seed = 1, alternative = c("two.side
 #' }
 #' @export
 #' @concept local
-#' @examples \dontrun{
-#' res <- LocalGi(X, W)
+#' @examples {
+#' data.use <- quakes[1:100,]
+#' W <- 1/as.matrix(dist(data.use[,1:2]))
+#' diag(W) <- 0
+#' res <- LocalGi(data.use[,3:4], W)
 #' }
 #' @references
 #' Getis, A. & Ord, J. K. The analysis of spatial association by use of distance statistics. Geogr. Anal. 24, 189–206 (1992)
@@ -174,8 +183,11 @@ LocalGi <- function(X, W, gstar = TRUE, alternative = c("two.sided", "less", "gr
 #' }
 #' @export
 #' @concept local
-#' @examples \dontrun{
-#' res <- PermutationGi(x, W)
+#' @examples {
+#' data.use <- quakes[1:100,]
+#' W <- 1/as.matrix(dist(data.use[,1:2]))
+#' diag(W) <- 0
+#' res <- PermutationGi(data.use[,3], W)
 #' }
 #'
 PermutationGi <- function(x, W, gstar = TRUE, n = 999, seed = 1, alternative = c("two.sided", "less", "greater"), p.adjust.method = "BH",

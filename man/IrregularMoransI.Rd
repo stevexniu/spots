@@ -39,8 +39,11 @@ A list containing the output from \code{\link[spots]{BivariateMoransI}} or \code
 Calculate Moran's I between two groups with irregular data shape.
 }
 \examples{
-\dontrun{
-IrregularMoransI(X, W, 1:10, 101:110)
+{
+data.use <- quakes[1:100,]
+W <- 1/as.matrix(dist(data.use[,1:2]))
+diag(W) <- 0
+res <- IrregularMoransI(data.use[,3:4], W, 1:10, 21:30)
 }
 
 }

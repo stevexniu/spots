@@ -17,8 +17,10 @@ NULL
 #' }
 #' @export
 #' @concept hnn
-#' @examples \dontrun{
-#' HnnNeighbor(dist.hnn, k = 10)
+#' @examples {
+#' data.use <- quakes[1:100,]
+#' dist.use <- as.matrix(dist(data.use[,1:2]))
+#' res <- HnnNeighbor(dist.use, k = 10)
 #' }
 #' @references
 #' Middleton, L. & Sivaswamy, J.
@@ -72,8 +74,10 @@ HnnNeighborIndex <- function(dist.hnn, k, include.self = TRUE){
 #' @importFrom stats dnorm
 #' @export
 #' @concept hnn
-#' @examples \dontrun{
-#' HnnWeight(dist.hnn, mu = 0, sigma = 0.5)
+#' @examples {
+#' data.use <- quakes[1:100,]
+#' dist.use <- as.matrix(dist(data.use[,1:2]))
+#' res <- HnnWeight(dist.use, mu = 0, sigma = 0.5)
 #' }
 #'
 HnnWeight <- function(dist.hnn, dist.k = NULL, mu = 0, sigma=1){
@@ -95,8 +99,11 @@ HnnWeight <- function(dist.hnn, dist.k = NULL, mu = 0, sigma=1){
 #' @seealso \code{\link[spots]{HnnWeight}}
 #' @export
 #' @concept hnn
-#' @examples \dontrun{
-#' imputed.data <- HnnImpute(data, dist.hnn)
+#' @examples {
+#' data.use <- quakes[1:100,]
+#' dist.use <- as.matrix(dist(data.use[,1:2]))
+#' # transpose the data to have features in rows and observations in columns
+#' res <- HnnImpute(t(data.use[,3:4]), dist.use)
 #' }
 #'
 HnnImpute <- function(data, dist.hnn, dist.k = NULL, mu = 0, sigma=1){
@@ -119,7 +126,7 @@ HnnImpute <- function(data, dist.hnn, dist.k = NULL, mu = 0, sigma=1){
 #' @concept hnn
 #' @examples \dontrun{
 #' barcodes <- c("AAACAACGAATAGTTC-1", "AAACTTAATTGCACGC-1")
-#' VisiumHnn(path, barcodes)
+#' VisiumHnn("~/Downloads/", barcodes)
 #' }
 #'
 VisiumHnn <- function(path, barcodes){

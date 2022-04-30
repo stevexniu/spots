@@ -24,8 +24,11 @@ Imputed data.
 Data imputation and smoothing using hexagonal nearest neighbor.
 }
 \examples{
-\dontrun{
-imputed.data <- HnnImpute(data, dist.hnn)
+{
+data.use <- quakes[1:100,]
+dist.use <- as.matrix(dist(data.use[,1:2]))
+# transpose the data to have features in rows and observations in columns
+res <- HnnImpute(t(data.use[,3:4]), dist.use)
 }
 
 }

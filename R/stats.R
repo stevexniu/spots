@@ -16,6 +16,13 @@ NULL
 #'   \item SD.I, the standard deviation of Moran's I under the null hypothesis.
 #' }
 #' @concept stats
+#' @export
+#' @examples {
+#' data.use <- quakes[1:100,]
+#' W <- 1/as.matrix(dist(data.use[,1:2]))
+#' diag(W) <- 0
+#' res <- BivariateMoransIStats(data.use[,3:4], W)
+#' }
 #' @references
 #' Czaplewski, R. L. Expected Value and Variance of Moran’s Bivariate Spatial Autocorrelation Statistic for a Permutation Test.
 #' (U.S. Department of Agriculture, Forest Service, Rocky Mountain Forest and Range Experiment Station, 1993).
@@ -66,6 +73,13 @@ BivariateMoransIStats <- function(X, W){
 #'   \item SD.I, the standard deviation of local Moran's I under the null hypothesis.
 #' }
 #' @concept stats
+#' @export
+#' @examples {
+#' data.use <- quakes[1:100,]
+#' W <- 1/as.matrix(dist(data.use[,1:2]))
+#' diag(W) <- 0
+#' res <- LocalMoransIStats(data.use[,3:4], W)
+#' }
 #' @references
 #' Anselin, L. Local indicators of spatial association-LISA. Geogr. Anal. 27, 93–115 (1995)
 #'
@@ -103,8 +117,13 @@ LocalMoransIStats <- function(X, W, scale = FALSE){
 #'   \item p.adj, a matrix of adjusted p-values.
 #' }
 #' @concept stats
+#' @export
+#' @examples {
+#' res <- ZPvalue(matrix(runif(100),10,10))
+#' }
 #'
 ZPvalue <- function(Z, alternative = c("two.sided", "less", "greater"), p.adjust.method = "BH"){
+  alternative <- match.arg(arg = alternative)
   if (alternative == "two.sided") {
     p.val <- 2*pnorm(abs(Z), lower.tail = FALSE)
     p.adj <- p.adjust(p = p.val, method = p.adjust.method)
@@ -140,7 +159,7 @@ ZPvalue <- function(Z, alternative = c("two.sided", "less", "greater"), p.adjust
 #' }
 #' @export
 #' @concept stats
-#' @examples \dontrun{
+#' @examples {
 #' x <- iris[, 1]
 #' y <- iris[, 2]
 #' res <- PermutationCorr(x, y, R = 9999)

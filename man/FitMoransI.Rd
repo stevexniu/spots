@@ -28,9 +28,12 @@ A list containing the following:
 Calculate fitted values of Moran's I as linear regression.
 }
 \examples{
-\dontrun{
-res <- OLSMoransI(X, W)
-FitMoransI(X, res$Y, res$Morans.I)
+{
+data.use <- quakes[1:100,]
+W <- 1/as.matrix(dist(data.use[,1:2]))
+diag(W) <- 0
+res <- OLSMoransI(data.use[,3:4], W)
+res.fitted <- FitMoransI(res$X, res$Y, res$Morans.I)
 }
 }
 \references{

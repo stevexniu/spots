@@ -27,8 +27,11 @@ NULL
 #' }
 #' @export
 #' @concept moransi
-#' @examples \dontrun{
-#' UnivariateMoransI(X, W)
+#' @examples {
+#' data.use <- quakes[1:100,]
+#' W <- 1/as.matrix(dist(data.use[,1:2]))
+#' diag(W) <- 0
+#' res <- UnivariateMoransI(data.use[,3:4], W)
 #' }
 #' @references
 #' Moran, P. A. P. Notes on continuous stochastic phenomena. Biometrika 37, 17–23 (1950)
@@ -84,8 +87,11 @@ UnivariateMoransI <- function(X, W, normalize = TRUE, alternative = c("two.sided
 #' @export
 #' @concept moransi
 #' @importFrom stats sd
-#' @examples \dontrun{
-#' res <- PermutationMoransI(x, W)
+#' @examples {
+#' data.use <- quakes[1:100,]
+#' W <- 1/as.matrix(dist(data.use[,1:2]))
+#' diag(W) <- 0
+#' res <- PermutationMoransI(data.use[,3], W)
 #' }
 #'
 PermutationMoransI <- function(x, W, n = 999, seed = 1, normalize = TRUE, return.permutation = FALSE){
@@ -127,8 +133,11 @@ PermutationMoransI <- function(x, W, n = 999, seed = 1, normalize = TRUE, return
 #' }
 #' @export
 #' @concept moransi
-#' @examples \dontrun{
-#' BivariateMoransI(X, W)
+#' @examples {
+#' data.use <- quakes[1:100,]
+#' W <- 1/as.matrix(dist(data.use[,1:2]))
+#' diag(W) <- 0
+#' res <- BivariateMoransI(data.use[,3:4], W)
 #' }
 #' @references
 #' Wartenberg, D. Multivariate spatial correlation:
@@ -171,8 +180,11 @@ BivariateMoransI <- function(X, W, alternative = c("two.sided", "less", "greater
 #' }
 #' @export
 #' @concept moransi
-#' @examples \dontrun{
-#' OLSMoransI(X, W)
+#' @examples {
+#' data.use <- quakes[1:100,]
+#' W <- 1/as.matrix(dist(data.use[,1:2]))
+#' diag(W) <- 0
+#' res <- OLSMoransI(data.use[,3:4], W)
 #' }
 #' @references
 #' Anselin, L. Local indicators of spatial association-LISA. Geogr. Anal. 27, 93–115 (2010)
@@ -222,9 +234,12 @@ OLSMoransI <- function(X, W, normalize = TRUE, alternative = c("two.sided", "les
 #' }
 #' @export
 #' @concept moransi
-#' @examples \dontrun{
-#' res <- OLSMoransI(X, W)
-#' FitMoransI(X, res$Y, res$Morans.I)
+#' @examples {
+#' data.use <- quakes[1:100,]
+#' W <- 1/as.matrix(dist(data.use[,1:2]))
+#' diag(W) <- 0
+#' res <- OLSMoransI(data.use[,3:4], W)
+#' res.fitted <- FitMoransI(res$X, res$Y, res$Morans.I)
 #' }
 #' @references
 #' Anselin, L. Local indicators of spatial association-LISA. Geogr. Anal. 27, 93–115 (2010)
@@ -247,8 +262,8 @@ FitMoransI<- function(X, Y, I, all = FALSE){
     }
     list(residuals = R, fitted.values = Y.hat, all.fitted.values = All.Y.hat, all.residuals = All.R)
   } else {
-    Y.hat1 <- t(t(X)*diag(I))
-    R1 <- Y-Y.hat
+    Y.hat <- t(t(X)*diag(I))
+    R <- Y-Y.hat
     list(residuals = R, fitted.values = Y.hat)
   }
 }
@@ -268,8 +283,11 @@ FitMoransI<- function(X, Y, I, all = FALSE){
 #' }
 #' @export
 #' @concept moransi
-#' @examples \dontrun{
-#' IrregularData(X, W, 1:10, 101:110)
+#' @examples {
+#' data.use <- quakes[1:100,]
+#' W <- 1/as.matrix(dist(data.use[,1:2]))
+#' diag(W) <- 0
+#' res <- IrregularData(data.use[,3:4], W, 1:10, 21:30)
 #' }
 #'
 IrregularData <- function(X, W, group1, group2){
@@ -296,8 +314,11 @@ IrregularData <- function(X, W, group1, group2){
 #' @return A list containing the output from \code{\link[spots]{BivariateMoransI}} or \code{\link[spots]{OLSMoransI}}.
 #' @export
 #' @concept moransi
-#' @examples \dontrun{
-#' IrregularMoransI(X, W, 1:10, 101:110)
+#' @examples {
+#' data.use <- quakes[1:100,]
+#' W <- 1/as.matrix(dist(data.use[,1:2]))
+#' diag(W) <- 0
+#' res <- IrregularMoransI(data.use[,3:4], W, 1:10, 21:30)
 #' }
 #'
 IrregularMoransI <- function(X, W, group1, group2, OLS = FALSE, normalize = TRUE, alternative = c("two.sided", "less", "greater"), p.adjust.method = "BH"){

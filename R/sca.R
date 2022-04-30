@@ -10,8 +10,11 @@ NULL
 #' @return A spatial cross-correlation matrix.
 #' @export
 #' @concept sca
-#' @examples \dontrun{
-#' M <- WartenbergM(X, W)
+#' @examples {
+#' data.use <- quakes[1:100,]
+#' W <- 1/as.matrix(dist(data.use[,1:2]))
+#' diag(W) <- 0
+#' M <- WartenbergM(data.use[,3:4], W)
 #' }
 #' @references
 #' Wartenberg, D. Multivariate spatial correlation:
@@ -38,8 +41,11 @@ WartenbergM <- function(X, W){
 #' @return A spatial cross-correlation matrix.
 #' @export
 #' @concept sca
-#' @examples \dontrun{
-#' L <- LeeL(X, W)
+#' @examples {
+#' data.use <- quakes[1:100,]
+#' W <- 1/as.matrix(dist(data.use[,1:2]))
+#' diag(W) <- 0
+#' L <- LeeL(data.use[,3:4], W)
 #' }
 #' @references
 #' Lee, S.-I. Developing a bivariate spatial association measure:
@@ -71,9 +77,12 @@ LeeL <- function(X, W){
 #' @export
 #' @concept sca
 #' @seealso \code{\link[spots]{WartenbergM}} \code{\link[spots]{LeeL}}.
-#' @examples \dontrun{
-#' M <- SpatialXCorr(X, W, method = "M")
-#' L <- SpatialXCorr(X, W, method = "L")
+#' @examples {
+#' data.use <- quakes[1:100,]
+#' W <- 1/as.matrix(dist(data.use[,1:2]))
+#' diag(W) <- 0
+#' M <- SpatialXCorr(data.use[,3:4], W, method = "M")
+#' L <- SpatialXCorr(data.use[,3:4], W, method = "L")
 #' }
 #' @references
 #' Wartenberg, D. Multivariate spatial correlation:
@@ -114,8 +123,11 @@ SpatialXCorr <- function(X, W, method = c("M", "L")){
 #' @export
 #' @concept sca
 #' @importFrom RSpectra eigs_sym
-#' @examples \dontrun{
-#' sca.res <- SCA(X, W, n.eigen = 30)
+#' @examples {
+#' data.use <- quakes[1:100,]
+#' W <- 1/as.matrix(dist(data.use[,1:2]))
+#' diag(W) <- 0
+#' sca.res <- SCA(data.use[,3:5], W, n.eigen = 2)
 #' }
 #' @references
 #' Wartenberg, D. Multivariate spatial correlation:

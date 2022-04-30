@@ -25,8 +25,10 @@ A list containing the following:
 Calculate hexagonal nearest neighbors.
 }
 \examples{
-\dontrun{
-HnnNeighbor(dist.hnn, k = 10)
+{
+data.use <- quakes[1:100,]
+dist.use <- as.matrix(dist(data.use[,1:2]))
+res <- HnnNeighbor(dist.use, k = 10)
 }
 }
 \references{

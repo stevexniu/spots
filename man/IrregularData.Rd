@@ -26,8 +26,11 @@ A list containing the following:
 Process irregular data shape for Moran's I between two groups.
 }
 \examples{
-\dontrun{
-IrregularData(X, W, 1:10, 101:110)
+{
+data.use <- quakes[1:100,]
+W <- 1/as.matrix(dist(data.use[,1:2]))
+diag(W) <- 0
+res <- IrregularData(data.use[,3:4], W, 1:10, 21:30)
 }
 
 }

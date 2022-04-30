@@ -53,8 +53,11 @@ A list containing the following:
 Calculate permutation based p-value for local Moran's I.
 }
 \examples{
-\dontrun{
-res <- PermutationLocalI(x, W)
+{
+data.use <- quakes[1:100,]
+W <- 1/as.matrix(dist(data.use[,1:2]))
+diag(W) <- 0
+res <- PermutationLocalI(data.use[,3], W)
 }
 
 }

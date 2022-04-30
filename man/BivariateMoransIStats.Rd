@@ -21,6 +21,14 @@ A list containing the following:
 \description{
 Calculate theoretical expectation and standard deviation of bivariate Moran's I under the null hypothesis.
 }
+\examples{
+{
+data.use <- quakes[1:100,]
+W <- 1/as.matrix(dist(data.use[,1:2]))
+diag(W) <- 0
+res <- BivariateMoransIStats(data.use[,3:4], W)
+}
+}
 \references{
 Czaplewski, R. L. Expected Value and Variance of Moran’s Bivariate Spatial Autocorrelation Statistic for a Permutation Test.
 (U.S. Department of Agriculture, Forest Service, Rocky Mountain Forest and Range Experiment Station, 1993).

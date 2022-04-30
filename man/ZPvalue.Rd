@@ -27,4 +27,10 @@ A list containing the following:
 \description{
 Calculate p-value of Z scores.
 }
+\examples{
+{
+res <- ZPvalue(matrix(runif(100),10,10))
+}
+
+}
 \concept{stats}

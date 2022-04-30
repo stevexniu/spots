@@ -3,7 +3,7 @@ pkgdown: 2.0.2
 pkgdown_sha: ~
 articles:
   get_started: get_started.html
-last_built: 2022-04-30T05:45Z
+last_built: 2022-04-30T18:35Z
 urls:
   reference: https://stevexniu.github.io/spots/reference
   article: https://stevexniu.github.io/spots/articles

@@ -8,7 +8,7 @@
 \description{
 \if{html}{\figure{logo.png}{options: align='right' alt='logo' width='120'}}
 
-Spatial component analysis and spatial omics data analysis. See Integrated protein and transcriptome high-throughput spatial profiling (2022) <doi:10.1101/2022.03.15.484516> for more details.
+The spots package is designed for spatial omics (10x Visium, etc.) data analysis. It performs various statistical analyses and tests, including spatial component analysis (SCA), both global and local spatial statistics, such as univariate and bivariate Moran's I, Getis-Ord Gi* statistics, etc. See Integrated protein and transcriptome high-throughput spatial profiling (2022) <doi:10.1101/2022.03.15.484516> for more details.
 }
 \seealso{
 Useful links:

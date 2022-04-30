@@ -17,11 +17,16 @@ Maintainer: 'X. Steve Niu <xin2001@med.cornell.edu>'
 New submission
 
 Possibly misspelled words in DESCRIPTION:
-  omics (10:70)
-  transcriptome (10:118)
+  Getis (10:278)
+  Gi (10:288)
+  Ord (10:284)
+  SCA (10:186)
+  Visium (10:67)
+  omics (10:56)
+  transcriptome (10:336)
 ```
 
-This is a new release and the word *transcriptome* is spelt correctly as in [Transcriptome_Wikipedia](https://en.wikipedia.org/wiki/Transcriptome), the same is *omics* as in [Omics_Wikipedia](https://en.wikipedia.org/wiki/omics).
+This is a new release, and these words and acronyms are spelt correctly. For example, the word *transcriptome* is spelt correctly as in [Transcriptome_Wikipedia](https://en.wikipedia.org/wiki/Transcriptome), the same is *omics* as in [Omics_Wikipedia](https://en.wikipedia.org/wiki/omics).
 
 There is another NOTE that is only found on Windows (Server 2022, R-devel 64-bit): 
 

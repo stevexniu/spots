@@ -1,6 +1,6 @@
 [![Build status](https://ci.appveyor.com/api/projects/status/lbdrt72vyiqwxxff/branch/main?svg=true)](https://ci.appveyor.com/project/stevexniu/spots/branch/main)
 [![Build Status](https://app.travis-ci.com/stevexniu/rspca.svg?branch=master)](https://app.travis-ci.com/stevexniu/rspca)
-[![codecov](https://codecov.io/gh/stevexniu/rspca/branch/master/graph/badge.svg?token=OXK8ZT3QH1)](https://codecov.io/gh/stevexniu/rspca)
+[![codecov](https://codecov.io/gh/stevexniu/spots/branch/main/graph/badge.svg?token=7KF4D3GGUB)](https://codecov.io/gh/stevexniu/spots)
 
 # spots: Spatial Component Analysis <img src="man/figures/logo.png" align="right" width="150"/>
 

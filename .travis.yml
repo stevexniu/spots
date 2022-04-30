@@ -28,4 +28,4 @@ env:
     - R_BUILD_ARGS="--no-build-vignettes --no-manual"
 
 after_success:
-  - travis_wait Rscript -e "covr::codecov(token='3b39660c-b824-4950-b1e7-dedcddaf9eb2')"
+  - travis_wait Rscript -e "covr::codecov()"

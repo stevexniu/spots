@@ -111,18 +111,19 @@ HnnImpute <- function(data, dist.hnn, dist.k = NULL, mu = 0, sigma=1){
 #'
 #' Get hexagonal nearest neighbor distance between 10x Visium spatial barcodes.
 #'
+#' @param path Path to downloaded HNN distance for Visium barcodes. See \code{\link[spots]{available.data}} for download url.
 #' @param barcodes 10x Visium whitelisted spatial barcodes.
 #' @return A hexagonal distance matrix for selected barcodes.
-#' @seealso \code{\link[spots]{LoadData}}.
+#' @seealso \code{\link[spots]{available.data}}.
 #' @export
 #' @concept hnn
 #' @examples \dontrun{
 #' barcodes <- c("AAACAACGAATAGTTC-1", "AAACTTAATTGCACGC-1")
-#' VisiumHnn(barcodes)
+#' VisiumHnn(path, barcodes)
 #' }
 #'
-VisiumHnn <- function(barcodes){
-  Visium.hnn.dist <- LoadData("Visium.HNN")
+VisiumHnn <- function(path, barcodes){
+  Visium.hnn.dist <- readRDS(path)
   dist.use <- as.matrix(Visium.hnn.dist[barcodes, barcodes])
   return(dist.use + t(dist.use))
 }

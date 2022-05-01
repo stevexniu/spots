@@ -33,7 +33,7 @@ library(spots)
 library(Seurat)
 library(ggplot2)
 posterior1 <- LoadData("~/Downloads/","Visium.Brain")
-SpatialDimPlot(posterior1)
+SpatialDimPlot(posterior1, pt.size.factor = 1.2, group.by = "region")
 ```
 
 ### Spatial Component Analysis (SCA)
@@ -81,7 +81,7 @@ posterior1@reductions[["sca"]] <- CreateDimReducObject(embeddings = posterior1.s
 # Visualization
 p1 <- DimPlot(posterior1, reduction = "sca", group.by = "region")
 p2 <- ElbowPlot(posterior1, reduction = "sca", ndims = 30)
-p3 <- SpatialFeaturePlot(posterior1, features = 'SC_1')
+p3 <- SpatialFeaturePlot(posterior1, features = 'SC_1', pt.size.factor = 1.2)
 p4 <- DimHeatmap(posterior1, reduction = "sca", fast = FALSE)
 (p1+p2)/(p3+p4)
 ```
@@ -92,7 +92,7 @@ Here we utilized Seurat's `FindClusters` function to identify clusters of spots 
 ```{r clustering, fig.height=6, fig.width=8}
 posterior1 <- FindNeighbors(posterior1, reduction = "sca", dims = 1:20,graph.name = c("sca.nn", "sca.snn"))
 posterior1 <- FindClusters(posterior1, resolution = 1, verbose = FALSE, graph.name = "sca.snn")
-SpatialDimPlot(posterior1, label = TRUE, label.size = 7, repel = TRUE)
+SpatialDimPlot(posterior1, label = TRUE, label.size = 7, repel = TRUE, pt.size.factor = 1.2)
 ```
 
 ### Comparison to PCA
@@ -101,8 +101,8 @@ We can compare the clustering result based on SCA to PCA. Here I used the same c
 posterior1 <- RunPCA(posterior1, npcs = 30, verbose = FALSE)
 posterior1 <- FindNeighbors(posterior1, reduction = "pca", dims = 1:20, graph.name = c("pca.nn", "pca.snn"))
 posterior1 <- FindClusters(posterior1, resolution = 1, verbose = FALSE, graph.name = "pca.snn")
-p1 <- SpatialDimPlot(posterior1, label = TRUE, label.size = 5, group.by = "sca.snn_res.1", repel = TRUE) 
-p2 <- SpatialDimPlot(posterior1, label = TRUE, label.size = 5, group.by = "pca.snn_res.1", repel = TRUE) 
+p1 <- SpatialDimPlot(posterior1, label = TRUE, label.size = 5, group.by = "sca.snn_res.1", repel = TRUE, pt.size.factor = 1.2) 
+p2 <- SpatialDimPlot(posterior1, label = TRUE, label.size = 5, group.by = "pca.snn_res.1", repel = TRUE, pt.size.factor = 1.2) 
 p1+p2
 ```
 

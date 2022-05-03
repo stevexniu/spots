@@ -20,4 +20,5 @@ Meta
 _pkgdown.yml
 
 # Ignore CRAN submission
+cran-comments.md
 CRAN-SUBMISSION

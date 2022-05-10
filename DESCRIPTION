@@ -26,7 +26,6 @@ Collate:
     'zzz.R'
 Imports: 
     Matrix,
-    RSpectra,
     tools,
     utils,
     methods,

@@ -23,6 +23,13 @@ install.packages("devtools")
 devtools::install_github("stevexniu/spots")
 ```
 
+Install the light-weight ```spots-feather``` without eign decomposition (```SCA``` functionality).
+
+``` r
+install.packages("devtools")
+devtools::install_github("stevexniu/spots", ref = "feather")
+```
+
 Usage
 -----
 See tutorials:

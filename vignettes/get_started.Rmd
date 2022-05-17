@@ -43,7 +43,7 @@ To achieve this, we first calculate the distance between each spots using hexago
 
 Typically, datapoints not located on the edges should have 6 1st-degree, 12 2nd-degree, 18 3rd-degree neighbors and so on. These specific parameters can be controlled using `HnnNeighbor` function.
 <center>
-![hnn](hnn_image.png){width=400px}
+![hnn](img/hnn_image.png){width=400px}
 </center>
 
 To turn this distance matrix to a weight matrix, we call `HnnWeight` function to apply a Gaussian filter.

@@ -34,6 +34,8 @@ Usage
 -----
 See tutorials:
 
+[SCA cs PCA](https://stevexniu.github.io/spots/articles/SCA_vs_PCA.html)
+
 [Get Started](https://stevexniu.github.io/spots/articles/get_started.html)
 
 [Spatial Statistics](https://stevexniu.github.io/spots/articles/spatial_statistics.html)

@@ -12,6 +12,7 @@ doc
 Meta
 /doc/
 /Meta/
+vignettes/*.rds
 
 # Ignore pkgdown files
 #docs

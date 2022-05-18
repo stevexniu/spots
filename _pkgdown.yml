@@ -1,0 +1,70 @@
+url: https://stevexniu.github.io/spots/
+
+destination: docs
+
+template:
+  package: preferably
+  params:
+    bootswatch: united
+    toggle: manual
+
+navbar:
+  structure:
+    left:
+    - articles
+    - reference
+    - news
+    right: github
+  components:
+    reference:
+      text: Reference
+      href: reference/index.html
+    news:
+      text: News
+      href: news/index.html
+    github:
+      icon: fab fa-github fa-lg
+      href: https://github.com/stevexniu/spots/
+      aria-label: github
+    articles:
+      text: Vignettes
+      menu:
+      - text: Get started
+        href: articles/get_started.html
+      - text: SCA vs PCA
+        href: articles/SCA_vs_PCA.html
+
+reference:
+- title: Moran's
+  desc: Functions to calculate univariate and multivariate Moran’s I
+- contents:
+  - has_concept("moransi")
+
+- title: Local Indicators of Spatial Association
+  desc: Functions to calculate local spatial statistics
+- contents:
+  - has_concept("local")
+
+- title: Spatial Component Analysis 
+  desc: Functions for Spatial Component Analysis (SCA)
+- contents:
+  - has_concept("sca")
+
+- title: Hexagonal Nearest Neighbor
+  desc: Functions related to Hexagonal Nearest Neighbor (HNN) calculation
+- contents:
+  - has_concept("hnn")
+
+- title: Statistical Tests
+  desc: Functions related to test statistics
+- contents:
+  - has_concept("stats")
+
+- title: Datasets 
+  desc: Available datasets to load
+- contents:
+  - has_concept("data")
+
+- title: Package Information
+- contents:
+  - spots-package

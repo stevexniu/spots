@@ -71,7 +71,10 @@
   </a>
   <ul class="dropdown-menu" role="menu">
 <li>
-      <a href="../articles/get_started.html">Get started with Visium Brain data</a>
+      <a href="../articles/get_started.html">Get started</a>
+    </li>
+    <li>
+      <a href="../articles/SCA_vs_PCA.html">SCA vs PCA</a>
     </li>
   </ul>
 </li>
@@ -114,7 +117,7 @@
     <div class="page-header toc-ignore">
       <h1 data-toc-skip>Get started with Visium Brain data</h1>
             
-            <h4 data-toc-skip class="date">Last Run: May 03, 2022</h4>
+            <h4 data-toc-skip class="date">Last Run: May 19, 2022</h4>
       
       <small class="dont-index">Source: <a href="https://github.com/stevexniu/spots/blob/HEAD/vignettes/get_started.Rmd" class="external-link"><code>vignettes/get_started.Rmd</code></a></small>
       <div class="hidden name"><code>get_started.Rmd</code></div>
@@ -148,7 +151,7 @@
 <p>To achieve this, we first calculate the distance between each spots using hexagonal nearest neighbor distance (<code>VisiumHnn</code> and <code>HnnNeighbor</code> functions) as it resembles the way Visium slides were generated.</p>
 Typically, datapoints not located on the edges should have 6 1st-degree, 12 2nd-degree, 18 3rd-degree neighbors and so on. These specific parameters can be controlled using <code>HnnNeighbor</code> function.
 <center>
-<img src="hnn_image.png" alt="hnn" width="400">
+<img src="img/hnn_image.png" alt="hnn" width="400">
 </center>
 <p>To turn this distance matrix to a weight matrix, we call <code>HnnWeight</code> function to apply a Gaussian filter. I'm using parameter <code>dist.k = 2</code> to consider only the 2nd-degree neighbors and <code>sigma = 2</code> for filter width.</p>
 <div class="sourceCode"><pre class="downlit sourceCode r">

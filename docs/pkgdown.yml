@@ -2,8 +2,9 @@ pandoc: 1.19.2.1
 pkgdown: 2.0.2
 pkgdown_sha: ~
 articles:
+  SCA_vs_PCA: SCA_vs_PCA.html
   get_started: get_started.html
-last_built: 2022-05-04T01:44Z
+last_built: 2022-05-19T09:41Z
 urls:
   reference: https://stevexniu.github.io/spots/reference
   article: https://stevexniu.github.io/spots/articles

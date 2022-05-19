@@ -14,3 +14,4 @@ codecov.yml
 ^_pkgdown\.yml$
 vignettes
 ^CRAN-SUBMISSION$
+LICENSE

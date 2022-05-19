@@ -34,7 +34,7 @@ Usage
 -----
 See tutorials:
 
-[SCA cs PCA](https://stevexniu.github.io/spots/articles/SCA_vs_PCA.html)
+[SCA vs PCA](https://stevexniu.github.io/spots/articles/SCA_vs_PCA.html)
 
 [Get Started](https://stevexniu.github.io/spots/articles/get_started.html)
 

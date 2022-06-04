@@ -1,3 +1,4 @@
+#' @include utils.R
 #' @import Matrix
 #' @importFrom stats cor p.adjust pnorm
 #' @importFrom methods is
@@ -200,6 +201,7 @@ PermutationCorr <- function(x, y, R = 999, seed = 1, return.permutation = FALSE)
 #' @param alternative Alternative hypothesis used, default is \code{two.sided}.
 #' @param p.adjust.method Method used for multiple comparisons correction, default is \code{BH}. See \code{\link[stats]{p.adjust}}.
 #' @param condition Value under null hypothesis to compare with, default is 0.
+#' @param error Rounding error, default is 1e-10. See \code{\link[spots]{`%>=%`}} and \code{\link[spots]{`%<=%`}}. 
 #' @return A list containing the following:
 #' \itemize{
 #'   \item p.val, permutation based p-value.
@@ -207,13 +209,11 @@ PermutationCorr <- function(x, y, R = 999, seed = 1, return.permutation = FALSE)
 #' }
 #' @keywords internal
 #'
-PermutationPval <- function(x, X.perm, alternative = c("two.sided", "less", "greater"), p.adjust.method = "BH", condition = 0){
-  `%>=%` <- function(x, y, e=1e-10) x + e > y
-  `%<=%` <- function(x, y, e=1e-10) x - e < y
+PermutationPval <- function(x, X.perm, alternative = c("two.sided", "less", "greater"), p.adjust.method = "BH", condition = 0, error = 1e-10){
   compare.func <- switch(alternative,
-                         two.sided = `%>=%`,
-                         less = `%<=%`,
-                         greater = `%>=%`)
+                         two.sided = spots:::`%>=%`,
+                         less = spots:::`%<=%`,
+                         greater = spots:::`%>=%`)
   n <- ncol(X.perm)
   if(alternative == "two.sided"){
     X.perm <- abs(X.perm)
